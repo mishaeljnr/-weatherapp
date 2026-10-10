@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>DTA Advanced Weather</title>
+  <link rel="stylesheet" href="weather.css">
+</head>
+<body>
+  <div class="app">
+    <header>
+      <h1>WeatherPro</h1>
+      <button id="locateBtn">📍 Use My Location</button>
+    </header>
+
+    <div class="search-box">
+      <input type="text" id="cityInput" placeholder="Search city... e.g. Ibadan">
+      <button id="searchBtn">Search</button>
+    </div>
+
+    <div id="recent" class="recent"></div>
+
+    <div id="loader" class="loader hidden">Loading...</div>
+    <p id="error" class="error"></p>
+
+    <div id="weather" class="hidden">
+      <div class="main-card">
+        <div>
+          <h2 id="cityName"></h2>
+          <p id="date"></p>
+          <h1 id="temp"></h1>
+          <p id="desc"></p>
+        </div>
+        <img id="icon" src="" alt="">
+      </div>
+
+      <div class="stats-grid">
+        <div class="stat"><span>Feels Like</span><b id="feels"></b></div>
+        <div class="stat"><span>Humidity</span><b id="humidity"></b></div>
+        <div class="stat"><span>Wind</span><b id="wind"></b></div>
+        <div class="stat"><span>Pressure</span><b id="pressure"></b></div>
+        <div class="stat"><span>Sunrise</span><b id="sunrise"></b></div>
+        <div class="stat"><span>Sunset</span><b id="sunset"></b></div>
+      </div>
+
+      <h3 class="section-title">Hourly Forecast</h3>
+      <div id="hourly" class="hourly-scroll"></div>
+
+      <h3 class="section-title">5-Day Forecast</h3>
+      <div id="forecast" class="forecast-list"></div>
+    </div>
+  </div>
+  <script src="weather.js"></script>
+</body>
+</html>
